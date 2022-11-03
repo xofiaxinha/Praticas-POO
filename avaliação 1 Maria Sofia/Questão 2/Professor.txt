@@ -1,0 +1,43 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Professor{
+	private:
+	string nome, matricula
+	int idade;
+	float salario;
+	public:
+	Professor(string, string, int, float);
+	void setNome(string);
+	void setMatricula(string);
+	void setIdade(int);
+	void setSalario(float);
+	string getNome();
+	string getMatricula();
+	int getIdade();
+	float getSalario();
+};
+Professor::Professor(string nome, string matricula, int idade, float salario){
+	setNome(nome);
+	setMatricula(matricula);
+	setIdade(idade);
+	setSalario(salario);
+}
+void Professor::setNome(string nome){
+	this->nome = nome;
+}
+void Professor::setMatricula(string matricula){
+	this->matricula = matricula;
+}
+void Professor::setIdade(int idade){
+	this->idade = idade;
+}
+void Professor::setSalario(float salario){
+	this->salario = salario;
+}
+string Professor::getNome(){
+	return nome;}
+string Professor::getMatricula(){return matricula;}
+int Professor::getIdade(){return idade;}
+float Professor::getSalario(){return salario;}

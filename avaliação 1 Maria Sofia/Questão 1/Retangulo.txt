@@ -1,0 +1,38 @@
+#include<iostream>
+using namespace std;
+class Retangulo{
+	private:
+	int base, altura;
+	public:
+	Retangulo(int, int);
+	void setBase(int);
+	void setAltura(int);
+	int getBase();
+	int getAltura();
+	int calculaArea();
+	int calculaPerimetro();
+	void print();
+};
+Retangulo::Retangulo(int base, int altura){
+	setBase(base);
+	setAltura(altura);
+}
+void Retangulo::setBase(int base){
+	this->base = base;
+}
+void Retangulo::setAltura(int altura){
+	this->altura = altura;
+}
+int calculaArea(){
+	int area = base * altura;
+	return area;
+}
+int calculaPerimetro(){
+	int perimetro = 2 * (base + altura);
+}
+void print(){
+	cout << "Base do retangulo: " << getBase() << '\n';
+	cout << "Altura do retangulo: " << getAltura() << '\n';
+	cout << "Area do retangulo: " << calculaArea() << '\n';
+	cout << "Perimetro do retangulo: " << calculaPerimetro() << '\n';
+}
